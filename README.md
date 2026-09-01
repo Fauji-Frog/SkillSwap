@@ -1,5 +1,7 @@
 # SkillSwap - Simple Skill Exchange MVP
 
+Built with simplicity in mind: The project was originally developed under a strict code-size constraint for an academic lab. Instead of adding unnecessary complexity, the focus was on delivering meaningful functionality with a compact and maintainable implementation.
+
 A very small React + Node.js + Express + MySQL project.
 
 ## Features
