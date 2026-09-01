@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS skillswap;
+USE skillswap;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) UNIQUE NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  student_id VARCHAR(50) NOT NULL,
+  batch VARCHAR(50) NOT NULL,
+  phone VARCHAR(30) NOT NULL,
+  description TEXT
+);
+
+CREATE TABLE IF NOT EXISTS posts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  teach_skill VARCHAR(150) NOT NULL,
+  learn_skill VARCHAR(150) NOT NULL,
+  description TEXT,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
